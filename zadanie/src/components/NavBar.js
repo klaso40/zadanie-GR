@@ -1,6 +1,6 @@
 import React from "react";
 
-function App() {
+function NavBar() {
   return (
     <header className="border-b-2 border-grey-500">
       <nav className="container my-3 mx-auto flex flex-row justify-between ">
@@ -28,4 +28,4 @@ function App() {
   );
 }
 
-export default App;
+export default NavBar;
