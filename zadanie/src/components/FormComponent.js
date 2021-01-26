@@ -31,10 +31,19 @@ function FormComponent() {
           {formPart}
         </CSSTransition>
       </SwitchTransition>
-      <div className="flex flex-row justify-between mt-16 mb-5">
-        <ButtonComponent text="Späť" onButtonClick={previous} />
+      <div
+        className={
+          formIndex === 1
+            ? "flex flex-row justify-end mt-16 mb-5"
+            : "flex flex-row justify-between mt-16 mb-5"
+        }
+      >
+        <div className={formIndex === 1 ? "hidden" : ""}>
+          <ButtonComponent text="Späť" onButtonClick={previous} />
+        </div>
+
         <ButtonComponent
-          text="Pokračovať"
+          text={formIndex === 3 ? "Odoslať formulár" : "Pokračovať"}
           disabled={false}
           onButtonClick={next}
         />
