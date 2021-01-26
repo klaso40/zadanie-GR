@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "../css/inputComponentCss.css";
-function MyInput({ title, placeholder, onChange }) {
+function MyInput({ title, placeholder, value, onChange }) {
   const [focused, setfocused] = useState(false);
 
   const blur = () => {
@@ -26,6 +26,7 @@ function MyInput({ title, placeholder, onChange }) {
         id={title}
         onBlur={blur}
         onFocus={focus}
+        value={value}
         onChange={(event) => onChangeCallback(event.target.value)}
         placeholder={placeholder}
         className="w-full block focus:outline-none"
