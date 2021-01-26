@@ -1,10 +1,9 @@
 import "../css/buttonComponentCss.css";
 
 function ButtonComponent({ text, disabled, onButtonClick }) {
-  function clickCallback() {
-    console.log(onButtonClick);
+  const clickCallback = () => {
     onButtonClick();
-  }
+  };
   return (
     <button
       disabled={disabled}

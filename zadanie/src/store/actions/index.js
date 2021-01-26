@@ -28,3 +28,31 @@ export const previousPart = () => {
     type: "PREVIOUS_PART",
   };
 };
+
+export const setName = (value) => {
+  return {
+    type: "SET_NAME",
+    payload: value,
+  };
+};
+
+export const setLastName = (value) => {
+  return {
+    type: "SET_LAST_NAME",
+    payload: value,
+  };
+};
+
+export const setEmail = (value) => {
+  return {
+    type: "SET_EMAIL",
+    payload: value,
+  };
+};
+
+export const setPhoneNumber = (value) => {
+  return {
+    type: "SET_PHONE_NUMBER",
+    payload: value,
+  };
+};
