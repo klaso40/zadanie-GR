@@ -36,6 +36,12 @@ function ProgressIndicator() {
     ) {
       toSmallIndicator(secondElement.current);
       toLargeIndicator(firstElement.current);
+    } else if (prevIndex === 2 && formIndex === 3) {
+      toSmallIndicator(secondElement.current);
+      toLargeIndicator(thirdElement.current);
+    } else {
+      toSmallIndicator(thirdElement.current);
+      toLargeIndicator(secondElement.current);
     }
   });
   return (
