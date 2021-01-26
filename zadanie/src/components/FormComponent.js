@@ -3,6 +3,7 @@ import SecondPart from "./form-parts/SecondPart";
 import ButtonComponent from "./ButtonComponent";
 import { useSelector, useDispatch } from "react-redux";
 import { nextPart, previousPart } from "../store/actions";
+import { SwitchTransition, CSSTransition } from "react-transition-group";
 
 function FormComponent() {
   const formIndex = useSelector((state) => state.formIndex);
@@ -21,7 +22,11 @@ function FormComponent() {
   }
   return (
     <div>
-      {formPart}
+      <SwitchTransition className="h-1/2">
+        <CSSTransition key={formIndex} classNames="fade" timeout={300}>
+          {formPart}
+        </CSSTransition>
+      </SwitchTransition>
       <div className="flex flex-row justify-between mt-16 mb-5">
         <ButtonComponent text="Späť" onButtonClick={previous} />
         <ButtonComponent
