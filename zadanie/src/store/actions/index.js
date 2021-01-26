@@ -16,3 +16,15 @@ export const setDonationValue = (amount) => {
     payload: amount,
   };
 };
+
+export const nextPart = () => {
+  return {
+    type: "NEXT_PART",
+  };
+};
+
+export const previousPart = () => {
+  return {
+    type: "PREVIOUS_PART",
+  };
+};

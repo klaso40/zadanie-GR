@@ -1,6 +1,6 @@
 @layer components {
   .enabled {
-    @apply bg-gradient-to-br from-primaryColor to-secondaryColor rounded-full text-sm text-white font-bold p-4;
+    @apply bg-gradient-to-br from-primaryColor to-secondaryColor rounded-full text-sm text-white font-bold p-4 focus:outline-none;
   }
 
   .disabled {
