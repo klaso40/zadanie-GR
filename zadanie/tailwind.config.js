@@ -11,6 +11,12 @@ module.exports = {
         subHeadlineColor: "#2F2F2F",
         borderColor: "#DFDFDF",
       },
+      fontFamily: {
+        hind: "Hind",
+      },
+      zIndex: {
+        "-10": "-10",
+      },
     },
   },
   variants: {
