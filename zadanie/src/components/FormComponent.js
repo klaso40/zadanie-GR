@@ -4,6 +4,7 @@ import ButtonComponent from "./ButtonComponent";
 import { useSelector, useDispatch } from "react-redux";
 import { nextPart, previousPart } from "../store/actions";
 import { SwitchTransition, CSSTransition } from "react-transition-group";
+import "../css/animations.css";
 
 function FormComponent() {
   const formIndex = useSelector((state) => state.formIndex);

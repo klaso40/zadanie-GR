@@ -1,0 +1,8 @@
+@layer components {
+  .active {
+    @apply bg-gradient-to-r from-secondaryColor to-primaryColor h-1.5 w-11 rounded-xl;
+  }
+  .unactive {
+    @apply bg-labelTextColor mx-2 h-1.5 w-5 rounded-xl;
+  }
+}
