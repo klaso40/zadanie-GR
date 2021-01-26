@@ -1,0 +1,9 @@
+@layer components {
+  .enabled {
+    @apply bg-gradient-to-br from-primaryColor to-secondaryColor rounded-full text-sm text-white font-bold p-4;
+  }
+
+  .disabled {
+    @apply bg-labelTextColor rounded-full text-sm text-white font-bold p-4;
+  }
+}
