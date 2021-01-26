@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "../css/inputComponentCss.css";
 function MyInput({ title, placeholder }) {
   const [focused, setfocused] = useState(false);
 

@@ -9,3 +9,10 @@ export const setFoundationHelp = () => {
     type: "FOUNDATION_HELP",
   };
 };
+
+export const setDonationValue = (amount) => {
+  return {
+    type: "SET_DONATION_VALUE",
+    payload: amount,
+  };
+};

@@ -1,0 +1,18 @@
+@layer components {
+  .active-value {
+    @apply w-20 h-12 bg-gradient-to-br from-primaryColor to-secondaryColor rounded-xl text-white flex justify-center
+                  items-center;
+  }
+  .active-value:hover {
+    @apply cursor-pointer;
+  }
+
+  .unactive-value {
+    @apply w-20 h-12 border  border-borderColor  rounded-xl text-subHeadlineColor flex justify-center
+                  items-center;
+  }
+
+  .unactive-value:hover {
+    @apply cursor-pointer;
+  }
+}

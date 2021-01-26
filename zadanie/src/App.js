@@ -4,6 +4,7 @@ import ProgressIndicator from "./components/ProgressIndicator";
 import SwitchHelp from "./components/SwitchHelpComponent";
 import bgImage from "./assets/bg-img.png";
 import MyInput from "./components/MyInput";
+import Donation from "./components/DonationComponent";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
               </aside>
             </div>
             <MyInput title="Meno" placeholder="Zadajte Vaše meno" />
+            <Donation />
           </div>
         </div>
         <div className="w-2/4 flex flex-row justify-center">

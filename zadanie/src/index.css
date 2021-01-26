@@ -11,12 +11,3 @@
   font-family: "Public sans";
   src: url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;800&display=swap");
 }
-@layer components {
-  .active-border {
-    @apply border block px-5 h-16 mt-3.5 rounded-xl border-primaryColor;
-  }
-
-  .unactive-border {
-    @apply block border px-5 h-16 mt-3.5 rounded-xl border-borderColor;
-  }
-}

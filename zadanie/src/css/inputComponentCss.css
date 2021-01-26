@@ -1,0 +1,9 @@
+@layer components {
+  .active-border {
+    @apply border block px-5 h-16 mt-3.5 rounded-xl border-primaryColor;
+  }
+
+  .unactive-border {
+    @apply block border px-5 h-16 mt-3.5 rounded-xl border-borderColor;
+  }
+}
