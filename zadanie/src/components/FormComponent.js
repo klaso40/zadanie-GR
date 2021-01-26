@@ -1,5 +1,6 @@
 import FirstPart from "./form-parts/FirstPart";
 import SecondPart from "./form-parts/SecondPart";
+import ThirdPart from "./form-parts/ThirdPart";
 import ButtonComponent from "./ButtonComponent";
 import { useSelector, useDispatch } from "react-redux";
 import { nextPart, previousPart } from "../store/actions";
@@ -14,6 +15,8 @@ function FormComponent() {
     formPart = <FirstPart />;
   } else if (formIndex === 2) {
     formPart = <SecondPart />;
+  } else {
+    formPart = <ThirdPart />;
   }
   function previous() {
     dispatch(previousPart());
