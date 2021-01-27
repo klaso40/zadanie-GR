@@ -1,11 +1,9 @@
 import { useSelector, useDispatch } from "react-redux";
 import { setDonationValue } from "../store/actions";
-import { useState } from "react";
 import "../css/donationComponentCss.css";
 function Donation() {
   const donationValue = useSelector((state) => state.donation);
   const donationValues = [5, 10, 20, 30, 50, 100];
-  const [customValue, setcustomValue] = useState(0);
   const dispath = useDispatch();
 
   return (
@@ -37,11 +35,11 @@ function Donation() {
         >
           <input
             id="customValue"
+            value={donationValues.includes(donationValue) ? 0 : donationValue}
             type="number"
-            onFocus={() => dispath(setDonationValue(customValue))}
             className="w-1/2 border-b-2 font-bold text-lg bg-transparent border-borderColor focus:outline-none"
-            onChange={(event) => setcustomValue(event.target.value)}
-          />{" "}
+            onChange={(event) => dispath(setDonationValue(event.target.value))}
+          />
           <span className="font-bold text-lg">€</span>
         </label>
       </div>
