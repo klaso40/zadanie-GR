@@ -1,5 +1,5 @@
 import Donation from "../DonationComponent";
-import MyInput from "../MyInput";
+import MySelect from "../MySelect";
 import SwitchHelp from "../SwitchHelpComponent";
 import ButtonComponent from "../ButtonComponent";
 import { useDispatch } from "react-redux";
@@ -23,7 +23,7 @@ function FirstPart() {
           </h3>
           <aside className="text-subHeadlineColor font-bold">Nepovinné</aside>
         </div>
-        <MyInput title="Meno" placeholder="Zadajte Vaše meno" />
+        <MySelect label="Útulok" placeholder="Vyberte útulok zo zoznamu" />
         <Donation />
       </div>
       <div className={"flex flex-row justify-end mt-16 mb-5"}>

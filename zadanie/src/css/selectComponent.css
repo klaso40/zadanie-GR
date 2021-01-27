@@ -1,0 +1,16 @@
+@layer components {
+  .unactive-select {
+    @apply block border px-5 h-16 mt-3.5 rounded-xl border-borderColor;
+  }
+  .active-select {
+    @apply border block px-5 h-16 mt-3.5 border-b-0 rounded-t-xl border-primaryColor;
+  }
+
+  .expanded-select {
+    @apply w-full h-60 rounded-b-xl border-t-0 border border-primaryColor bg-white z-10 absolute overflow-scroll;
+  }
+
+  .unexpanded-select {
+    @apply hidden;
+  }
+}

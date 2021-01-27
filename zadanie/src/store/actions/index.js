@@ -56,3 +56,17 @@ export const setPhoneNumber = (value) => {
     payload: value,
   };
 };
+
+export const setShelters = (value) => {
+  return {
+    type: "SET_SHELTERS",
+    payload: value,
+  };
+};
+
+export const setShelter = (value) => {
+  return {
+    type: "SET_SHELTER",
+    payload: value,
+  };
+};

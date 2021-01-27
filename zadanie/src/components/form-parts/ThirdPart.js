@@ -10,6 +10,7 @@ function ThirdPart() {
   const lastName = useSelector((state) => state.lastName);
   const email = useSelector((state) => state.email);
   const phoneNumber = useSelector((state) => state.phoneNumber);
+  const selectedShelter = useSelector((state) => state.selectedShelter);
   const dispatch = useDispatch();
 
   const previous = () => {
@@ -28,7 +29,8 @@ function ThirdPart() {
             : "Chcem finančne prispieť celej nadácii"
         }
       />
-      <SummaryRow label="Najviac mi záleží na útulku" text="" />
+      <SummaryRow label="Najviac mi záleží na útulku" text={selectedShelter} />
+
       <SummaryRow label="Suma ktorou chcem pomôcť" text={donation + " €"} />
       <SummaryRow label="Meno a priezvisko" text={name + " " + lastName} />
       <SummaryRow label="E-mailová adresa" text={email} />

@@ -7,6 +7,7 @@ function MyInput({
   onChange,
   type = "text",
   errorMessage = "",
+  readOnly = false,
   onBlur,
 }) {
   const [focused, setfocused] = useState(false);
@@ -42,6 +43,7 @@ function MyInput({
         <input
           type={type}
           name=""
+          readOnly={readOnly}
           id={title}
           onBlur={blur}
           onFocus={focus}

@@ -5,6 +5,8 @@ import nameReducer from "./nameReducer";
 import lastNameReducer from "./lastNameReducer";
 import emailReducer from "./emailReducer";
 import phoneNumberReducer from "./phoneNumberReducer";
+import sheltersReducer from "./sheltersReducer";
+import selectedShelterReducer from "./selectedShelterReducer";
 import { combineReducers } from "redux";
 
 const rootReducer = combineReducers({
@@ -15,6 +17,8 @@ const rootReducer = combineReducers({
   lastName: lastNameReducer,
   email: emailReducer,
   phoneNumber: phoneNumberReducer,
+  shelters: sheltersReducer,
+  selectedShelter: selectedShelterReducer,
 });
 
 export default rootReducer;
