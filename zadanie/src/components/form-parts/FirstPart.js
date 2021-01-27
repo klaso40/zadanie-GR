@@ -1,9 +1,15 @@
-import { CSSTransition, TransitionGroup } from "react-transition-group";
 import Donation from "../DonationComponent";
 import MyInput from "../MyInput";
 import SwitchHelp from "../SwitchHelpComponent";
+import ButtonComponent from "../ButtonComponent";
+import { useDispatch } from "react-redux";
+import { nextPart } from "../../store/actions";
 
 function FirstPart() {
+  const dispatch = useDispatch();
+  const next = () => {
+    dispatch(nextPart());
+  };
   return (
     <div>
       <h1 className="text-headlineColor text-5xl font-bold my-7">
@@ -19,6 +25,13 @@ function FirstPart() {
         </div>
         <MyInput title="Meno" placeholder="Zadajte Vaše meno" />
         <Donation />
+      </div>
+      <div className={"flex flex-row justify-end mt-16 mb-5"}>
+        <ButtonComponent
+          text="Pokračovať"
+          disabled={false}
+          onButtonClick={() => next()}
+        />
       </div>
     </div>
   );

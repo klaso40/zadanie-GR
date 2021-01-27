@@ -6,4 +6,7 @@
   .unactive-border {
     @apply block border px-5 h-16 mt-3.5 rounded-xl border-borderColor;
   }
+  .error {
+    @apply block border text-red-500 px-5 h-16 mt-3.5 rounded-xl border-red-500;
+  }
 }

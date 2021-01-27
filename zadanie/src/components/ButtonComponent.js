@@ -2,7 +2,9 @@ import "../css/buttonComponentCss.css";
 
 function ButtonComponent({ text, disabled, onButtonClick }) {
   const clickCallback = () => {
-    onButtonClick();
+    if (onButtonClick) {
+      onButtonClick();
+    }
   };
   return (
     <button
