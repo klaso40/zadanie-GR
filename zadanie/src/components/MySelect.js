@@ -47,14 +47,14 @@ function MySelect({ label, placeholder }) {
       </label>
 
       <ul className={isOpen ? "expanded-select" : "unexpanded-select"}>
-        {shelters.map((value, index) => {
+        {shelters.map((item, index) => {
           return (
             <li
               key={index}
-              onClick={() => onSelectedItem(value.name)}
+              onClick={() => onSelectedItem(item.name)}
               className="font-bold text-lg px-5 py-2 text-gray-900 hover:bg-primaryColor hover:text-white cursor-pointer"
             >
-              {value.name}
+              {item.name}
             </li>
           );
         })}

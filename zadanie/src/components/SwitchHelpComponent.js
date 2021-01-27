@@ -12,9 +12,9 @@ function SwitchHelp() {
     // Switch animation
     if (helpState === 0) {
       gsap.to(selectorRef.current, {
-        duration: 0.2,
+        duration: 0.3,
         left: 0,
-        ease: "linear",
+        ease: "easeInOutCirc",
         borderTopLeftRadius: 0.75 + "rem",
         borderBottomLeftRadius: 0.75 + "rem",
         borderTopRightRadius: 0,
@@ -26,9 +26,9 @@ function SwitchHelp() {
         borderBottomLeftRadius: 0,
         borderTopRightRadius: 0.75 + "rem",
         borderBottomRightRadius: 0.75 + "rem",
-        duration: 0.2,
+        duration: 0.3,
         left: selectorRef.current.clientWidth,
-        ease: "linear",
+        ease: "easeInOutCirc",
       });
     }
   }, [helpState]);

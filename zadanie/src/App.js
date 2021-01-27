@@ -6,6 +6,7 @@ import React from "react";
 import { setShelters } from "./store/actions";
 import store from "./store";
 import ApiClient from "./services/ApiClient";
+import MyFooter from "./components/MyFooter";
 
 class App extends React.Component {
   componentDidMount() {
@@ -20,15 +21,16 @@ class App extends React.Component {
     return (
       <div>
         <NavBar />
-        <main className="container mx-auto flex">
-          <div className="w-2/4">
+        <main className="container h-screen mx-auto flex">
+          <div className="w-1/2">
             <ProgressIndicator />
             <FormComponent />
           </div>
-          <div className="w-2/4 flex flex-row justify-center">
-            <img src={bgImage} alt="" />
+          <div className="w-1/2 flex flex-row justify-center items-center">
+            <img src={bgImage} alt="" className="h-3/4" />
           </div>
         </main>
+        <MyFooter />
       </div>
     );
   }
