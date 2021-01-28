@@ -34,7 +34,6 @@ function FirstPart() {
     setDonationError(donationErr);
     let shelterErr = validateSelectShelter();
     setSelectShelterError(shelterErr);
-    console.log(donationErr === "");
     if (donationErr === "" && shelterErr === "") {
       dispatch(nextPart());
     }

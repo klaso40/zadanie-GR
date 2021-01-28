@@ -17,7 +17,7 @@ function MySelect({ label, placeholder }) {
   return (
     <div className="relative">
       <label
-        for="name"
+        htmlFor="name"
         onClick={() => setIsOpen(!isOpen)}
         className={isOpen ? "active-select " : "unactive-select"}
       >

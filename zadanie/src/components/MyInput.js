@@ -33,7 +33,7 @@ function MyInput({
   return (
     <div>
       <label
-        for="name"
+        htmlFor="name"
         className={
           errorMessage !== ""
             ? "error"
