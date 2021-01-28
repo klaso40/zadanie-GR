@@ -35,8 +35,10 @@ function Donation() {
         >
           <input
             id="customValue"
-            value={donationValues.includes(donationValue) ? 0 : donationValue}
+            min="1"
+            value={donationValues.includes(donationValue) ? 1 : donationValue}
             type="number"
+            onFocus={(event) => dispath(setDonationValue(event.target.value))}
             className="w-1/2 border-b-2 font-bold text-lg bg-transparent border-borderColor focus:outline-none"
             onChange={(event) => dispath(setDonationValue(event.target.value))}
           />
