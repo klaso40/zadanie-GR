@@ -57,7 +57,7 @@ function MyInput({
             placeholder={placeholder}
             className={
               type === "tel"
-                ? "w-10/12 block focus:outline-none"
+                ? "w-2/3 block focus:outline-none md:w-10/12"
                 : "w-full block focus:outline-none"
             }
           />

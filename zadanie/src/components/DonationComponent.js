@@ -7,11 +7,11 @@ function Donation() {
   const dispath = useDispatch();
 
   return (
-    <div className="mt-11 ">
+    <div className="mt-11">
       <label className="text-headlineColor font-bold">
         Suma, ktorou chcem prispieť
       </label>
-      <div className="mt-3.5 flex flex-row justify-between">
+      <div className="mt-3.5 grid gap-6 grid-cols-3 md:grid-cols-5 lg:grid-cols-7">
         {donationValues.map((value, index) => {
           return (
             <div

@@ -21,3 +21,9 @@ input[type="number"]::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+
+@layer components {
+  .headline-text-style {
+    @apply text-headlineColor text-2xl  font-bold my-7 md:text-4xl lg:text-5xl;
+  }
+}

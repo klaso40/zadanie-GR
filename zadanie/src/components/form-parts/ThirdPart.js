@@ -19,9 +19,7 @@ function ThirdPart() {
   };
   return (
     <div>
-      <h1 className="text-headlineColor text-5xl font-bold my-7">
-        Skontrolujte si zadané údaje
-      </h1>
+      <h1 className="headline-text-style">Skontrolujte si zadané údaje</h1>
       <SummaryRow
         label="Akou formou chcem pomôcť"
         text={

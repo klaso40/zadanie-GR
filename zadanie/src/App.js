@@ -21,12 +21,12 @@ class App extends React.Component {
     return (
       <div>
         <NavBar />
-        <main className="container h-screen mx-auto flex">
-          <div className="w-1/2">
+        <main className="container min-h-screen mx-auto flex">
+          <div className="w-full xl:w-1/2">
             <ProgressIndicator />
             <FormComponent />
           </div>
-          <div className="w-1/2 flex flex-row justify-center items-center">
+          <div className="hidden xl:flex flex-row justify-center items-center w-1/2">
             <img src={bgImage} alt="" className="h-3/4" />
           </div>
         </main>

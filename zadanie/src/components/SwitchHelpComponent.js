@@ -33,16 +33,21 @@ function SwitchHelp() {
     }
   }, [helpState]);
   return (
-    <div className="h-44 border  border-primaryColor flex rounded-xl relative hover: cursor-pointer ">
+    <div className="border  border-primaryColor flex rounded-xl relative hover: cursor-pointer md:h-44 ">
       <div className="w-1/2 p-6" onClick={() => dispatch(setShelterHelp())}>
         <div className={helpState === 0 ? "text-white" : "text-labelTextColor"}>
-          <WalletImage />
+          <div className="hidden md:block">
+            <WalletImage />
+          </div>
+
           <h2>Chcem finančne prispieť konkrétnemu útulku</h2>
         </div>
       </div>
       <div className="w-1/2 p-6" onClick={() => dispatch(setFoundationHelp())}>
         <div className={helpState === 1 ? "text-white" : "text-labelTextColor"}>
-          <WalletImage />
+          <div className="hidden md:block">
+            <WalletImage />
+          </div>
           <h2>Chcem finančne prispieť celej nadácii</h2>
         </div>
       </div>

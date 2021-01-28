@@ -41,8 +41,8 @@ function FirstPart() {
   };
   return (
     <div>
-      <h1 className="text-headlineColor text-5xl font-bold my-7">
-        Vyberte si možnosť, ako <br /> chcete pomôcť
+      <h1 className="headline-text-style">
+        Vyberte si možnosť, ako chcete pomôcť
       </h1>
       <SwitchHelp />
       <div className="mt-14">
