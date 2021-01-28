@@ -57,6 +57,13 @@ export const setPhoneNumber = (value) => {
   };
 };
 
+export const setPhonePreset = (value) => {
+  return {
+    type: "SET_PHONE_PRESET",
+    payload: value,
+  };
+};
+
 export const setShelters = (value) => {
   return {
     type: "SET_SHELTERS",

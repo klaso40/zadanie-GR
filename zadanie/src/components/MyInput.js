@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "../css/inputComponentCss.css";
+import React from "react";
+import PhonePresetSelect from "./PhonePresetSelect";
 function MyInput({
   title,
   placeholder,
@@ -9,6 +11,7 @@ function MyInput({
   errorMessage = "",
   readOnly = false,
   onBlur,
+  slot,
 }) {
   const [focused, setfocused] = useState(false);
 
@@ -40,18 +43,25 @@ function MyInput({
         }
       >
         <h3 className="text-headlineColor font-bold mt-2">{title}</h3>
-        <input
-          type={type}
-          name=""
-          readOnly={readOnly}
-          id={title}
-          onBlur={blur}
-          onFocus={focus}
-          value={value}
-          onChange={(event) => onChangeCallback(event.target.value)}
-          placeholder={placeholder}
-          className="w-full block focus:outline-none"
-        />
+        <div className="flex flex-row">
+          {type === "tel" ? <PhonePresetSelect></PhonePresetSelect> : ""}
+          <input
+            type={type}
+            name=""
+            readOnly={readOnly}
+            id={title}
+            onBlur={blur}
+            onFocus={focus}
+            value={value}
+            onChange={(event) => onChangeCallback(event.target.value)}
+            placeholder={placeholder}
+            className={
+              type === "tel"
+                ? "w-10/12 block focus:outline-none"
+                : "w-full block focus:outline-none"
+            }
+          />
+        </div>
       </label>
       <span className="text-sm text-red-500">{errorMessage}</span>
     </div>

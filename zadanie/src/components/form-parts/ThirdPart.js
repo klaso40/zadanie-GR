@@ -9,7 +9,8 @@ function ThirdPart() {
   const name = useSelector((state) => state.name);
   const lastName = useSelector((state) => state.lastName);
   const email = useSelector((state) => state.email);
-  const phoneNumber = useSelector((state) => state.phoneNumber);
+  const phoneNumber = useSelector((state) => state.phoneNumber.number);
+  const phonePreset = useSelector((state) => state.phoneNumber.preset);
   const selectedShelter = useSelector((state) => state.selectedShelter);
   const dispatch = useDispatch();
 
@@ -19,7 +20,7 @@ function ThirdPart() {
   return (
     <div>
       <h1 className="text-headlineColor text-5xl font-bold my-7">
-        Skotrolujte si zadané údaje
+        Skontrolujte si zadané údaje
       </h1>
       <SummaryRow
         label="Akou formou chcem pomôcť"
@@ -29,12 +30,28 @@ function ThirdPart() {
             : "Chcem finančne prispieť celej nadácii"
         }
       />
-      <SummaryRow label="Najviac mi záleží na útulku" text={selectedShelter} />
+      {selectedShelter !== "" ? (
+        <SummaryRow
+          label="Najviac mi záleží na útulku"
+          text={selectedShelter}
+        />
+      ) : (
+        ""
+      )}
 
       <SummaryRow label="Suma ktorou chcem pomôcť" text={donation + " €"} />
       <SummaryRow label="Meno a priezvisko" text={name + " " + lastName} />
-      <SummaryRow label="E-mailová adresa" text={email} />
-      <SummaryRow label="Telefónne číslo" text={phoneNumber} />
+      {email !== "" ? <SummaryRow label="E-mailová adresa" text={email} /> : ""}
+
+      {phoneNumber !== "" ? (
+        <SummaryRow
+          label="Telefónne číslo"
+          text={phonePreset + " " + phoneNumber}
+        />
+      ) : (
+        ""
+      )}
+
       <div className={"flex flex-row justify-between mt-16 mb-5"}>
         <ButtonComponent text="Späť" onButtonClick={() => previous()} />
 

@@ -2,6 +2,7 @@ import MyInput from "../MyInput";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import ButtonComponent from "../ButtonComponent";
+
 import {
   nextPart,
   previousPart,
@@ -14,7 +15,7 @@ function SecondPart() {
   const dispatch = useDispatch();
   const name = useSelector((state) => state.name);
   const lastName = useSelector((state) => state.lastName);
-  const phoneNumber = useSelector((state) => state.phoneNumber);
+  const phoneNumber = useSelector((state) => state.phoneNumber.number);
   const email = useSelector((state) => state.email);
 
   // Error Messages
@@ -48,19 +49,18 @@ function SecondPart() {
 
   // Rules
   const nameRules = {
-    required: true,
-    minLength: 3,
+    minLength: 2,
+    maxLength: 30,
   };
   const lastNameRules = {
     required: true,
-    minLength: 3,
+    minLength: 2,
+    maxLength: 30,
   };
   const emailRules = {
-    required: true,
     email: true,
   };
   const phoneNumberRules = {
-    required: true,
     phoneNumber: true,
   };
 
@@ -71,27 +71,37 @@ function SecondPart() {
   };
 
   const validatePhoneNumber = (number) => {
-    const re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
-    return re.test(number);
+    number = number.replace(/\s/g, "");
+    return !isNaN(number) && number.length === 9;
   };
   const validate = (rules, value) => {
     if (rules) {
       if (rules.required && value === "") {
         return `Toto pole je povinné!`;
       } else if (rules.minLength && value.length < rules.minLength) {
-        return `Minimálna dĺžka sú ${rules.minLength} znaky!`;
+        if (value.length === 0 && !rules.required) {
+          return "";
+        } else {
+          return `Minimálna dĺžka sú ${rules.minLength} znaky!`;
+        }
       } else if (rules.email) {
-        if (!validateEmail(value)) {
+        if (!rules.required && value.length === 0) {
+          return "";
+        } else if (!validateEmail(value)) {
           return `Zadajte platný E-mail`;
         } else {
           return ``;
         }
       } else if (rules.phoneNumber) {
-        if (!validatePhoneNumber(value)) {
+        if (value.length === 0 && !rules.required) {
+          return "";
+        } else if (!validatePhoneNumber(value)) {
           return `Zadajte platné telefónne číslo`;
         } else {
           return ``;
         }
+      } else if (rules.maxLength && value.length > rules.maxLength) {
+        return "Zadaný reťazec je príliš dlhý";
       } else {
         return ``;
       }
@@ -146,8 +156,7 @@ function SecondPart() {
         value={phoneNumber}
         onBlur={(value) => validatePhoneNumberField(value)}
         errorMessage={phoneNumberErrorMessage}
-        type="number"
-        placeholder="🇸🇰 +421"
+        type="tel"
         onChange={(value) => dispatch(setPhoneNumber(value))}
       />
 
