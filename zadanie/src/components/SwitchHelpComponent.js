@@ -2,7 +2,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { setShelterHelp, setFoundationHelp } from "../store/actions";
 import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
-import WalletImage from "../assets/WallteImage";
+import WalletImage from "../assets/WalletImage";
 function SwitchHelp() {
   const helpState = useSelector((state) => state.help);
   const dispatch = useDispatch();
