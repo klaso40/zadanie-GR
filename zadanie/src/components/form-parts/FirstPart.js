@@ -74,6 +74,7 @@ function FirstPart() {
       <div className={"flex flex-row justify-end mt-16 mb-5"}>
         <ButtonComponent
           text="Pokračovať"
+          className="next-button"
           disabled={false}
           onButtonClick={() => next()}
         />

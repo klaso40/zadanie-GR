@@ -1,6 +1,6 @@
 import "../css/buttonComponentCss.css";
 
-function ButtonComponent({ text, disabled, onButtonClick }) {
+function ButtonComponent({ text, disabled, onButtonClick, className }) {
   const clickCallback = () => {
     if (onButtonClick) {
       onButtonClick();
@@ -9,7 +9,7 @@ function ButtonComponent({ text, disabled, onButtonClick }) {
   return (
     <button
       disabled={disabled}
-      className={disabled ? "disabled" : "enabled"}
+      className={className}
       onClick={() => clickCallback()}
     >
       {text}

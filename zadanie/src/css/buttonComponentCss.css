@@ -1,8 +1,11 @@
 @layer components {
-  .enabled {
+  .next-button {
     @apply bg-gradient-to-br from-primaryColor to-secondaryColor rounded-full text-sm text-white font-bold p-4 focus:outline-none;
   }
 
+  .back-button {
+    @apply bg-backButtonColor rounded-full text-sm text-subHeadlineColor font-bold p-4 focus:outline-none;
+  }
   .disabled {
     @apply bg-labelTextColor rounded-full text-sm text-white font-bold p-4;
   }

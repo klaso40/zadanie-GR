@@ -161,10 +161,15 @@ function SecondPart() {
       />
 
       <div className={"flex flex-row justify-between mt-16 mb-5"}>
-        <ButtonComponent text="Späť" onButtonClick={() => previous()} />
+        <ButtonComponent
+          text="Späť"
+          className="back-button"
+          onButtonClick={() => previous()}
+        />
 
         <ButtonComponent
           text="Pokračovať"
+          className="next-button"
           disabled={false}
           onButtonClick={() => next()}
         />

@@ -19,6 +19,7 @@ module.exports = {
         labelTextColor: "#9F9F9F",
         headlineColor: "#000000",
         subHeadlineColor: "#2F2F2F",
+        backButtonColor: "#F3E2D9",
         borderColor: "#DFDFDF",
       },
       fontFamily: {

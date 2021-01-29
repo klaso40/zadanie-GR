@@ -49,11 +49,24 @@ function ThirdPart() {
       ) : (
         ""
       )}
+      <label className="flex items-center">
+        <input type="checkbox" name="" id="" className="w-4 h-4" />
+        <p className="ml-2 text-subHeadlineColor text-sm">
+          Súhlasím so spracovaním mojich osobných údajov
+        </p>
+      </label>
 
       <div className={"flex flex-row justify-between mt-16 mb-5"}>
-        <ButtonComponent text="Späť" onButtonClick={() => previous()} />
-
-        <ButtonComponent text="Odoslať" disabled={false} />
+        <ButtonComponent
+          text="Späť"
+          className="back-button"
+          onButtonClick={() => previous()}
+        />
+        <ButtonComponent
+          text="Odoslať"
+          className="next-button"
+          disabled={false}
+        />
       </div>
     </div>
   );
