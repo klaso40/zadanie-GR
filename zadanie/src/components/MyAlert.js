@@ -1,10 +1,8 @@
 import "../css/alertCss.css";
-function MyAlert() {
+function MyAlert({ text, className }) {
   return (
-    <div className="success-alert">
-      <h1 className="text-lg text-white">
-        Formulár sa podarilo úspešne odoslať
-      </h1>
+    <div className={className}>
+      <h1 className="text-lg text-white">{text}</h1>
     </div>
   );
 }

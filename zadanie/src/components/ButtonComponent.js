@@ -1,6 +1,14 @@
 import "../css/buttonComponentCss.css";
+import "../assets/LoadingSpinner";
+import LoadingSpinner from "../assets/LoadingSpinner";
 
-function ButtonComponent({ text, disabled, onButtonClick, className }) {
+function ButtonComponent({
+  text,
+  disabled,
+  onButtonClick,
+  className,
+  loading = false,
+}) {
   const clickCallback = () => {
     if (onButtonClick) {
       onButtonClick();
@@ -12,7 +20,10 @@ function ButtonComponent({ text, disabled, onButtonClick, className }) {
       className={className}
       onClick={() => clickCallback()}
     >
-      {text}
+      <div className="flex flex-row">
+        {loading ? <LoadingSpinner /> : ""}
+        {text}
+      </div>
     </button>
   );
 }

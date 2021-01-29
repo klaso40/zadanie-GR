@@ -56,9 +56,7 @@ function FirstPart() {
           )}
         </div>
         <MySelect label="Útulok" placeholder="Vyberte útulok zo zoznamu" />
-        {setSelectShelterError !== "" &&
-        help === 0 &&
-        selectedShelter === "" ? (
+        {selectShelterError !== "" && help === 0 && selectedShelter === "" ? (
           <span className="text-sm text-red-500">{selectShelterError}</span>
         ) : (
           ""

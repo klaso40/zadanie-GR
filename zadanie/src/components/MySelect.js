@@ -28,7 +28,7 @@ function MySelect({ label, placeholder }) {
               type="text"
               name=""
               readOnly
-              value={selectedShelter}
+              value={selectedShelter.name}
               id={label}
               placeholder={placeholder}
               className="w-full block focus:outline-none"
@@ -51,7 +51,7 @@ function MySelect({ label, placeholder }) {
           return (
             <li
               key={index}
-              onClick={() => onSelectedItem(item.name)}
+              onClick={() => onSelectedItem(item)}
               className="font-bold text-lg px-5 py-2 text-gray-900 hover:bg-primaryColor hover:text-white cursor-pointer"
             >
               {item.name}
