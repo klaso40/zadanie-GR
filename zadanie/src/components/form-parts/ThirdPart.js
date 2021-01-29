@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import ButtonComponent from "../ButtonComponent";
 import { useDispatch } from "react-redux";
 import { previousPart } from "../../store/actions";
+import MyAlert from "../MyAlert";
 function ThirdPart() {
   const help = useSelector((state) => state.help);
   const donation = useSelector((state) => state.donation);
@@ -19,6 +20,7 @@ function ThirdPart() {
   };
   return (
     <div>
+      <MyAlert />
       <h1 className="headline-text-style">Skontrolujte si zadané údaje</h1>
       <SummaryRow
         label="Akou formou chcem pomôcť"

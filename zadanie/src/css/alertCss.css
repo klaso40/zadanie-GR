@@ -1,0 +1,8 @@
+@layer components {
+  .success-alert {
+    @apply bg-green-500  p-5 rounded-xl fixed top-10 right-0;
+  }
+  .error-alert {
+    @apply bg-red-500  p-5 rounded-xl fixed top-10 right-0;
+  }
+}
