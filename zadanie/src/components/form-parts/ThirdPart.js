@@ -37,7 +37,9 @@ function ThirdPart() {
   const showAlert = () => {
     alertRef.current.classList.toggle("hidden");
     setTimeout(() => {
-      alertRef.current.classList.toggle("hidden");
+      if (alertRef.current) {
+        alertRef.current.classList.toggle("hidden");
+      }
     }, 5000);
   };
   const sendData = () => {
